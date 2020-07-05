@@ -1,0 +1,28 @@
+#include<conio.h>
+#include<stdio.h>
+	void main()
+	{ int i,j,ar[10],temp=0;
+	  clrscr();
+	  printf("\n enter the numbers of the array upto 10....!");
+		for(i=0;i<10;i++)
+		   { scanf("%d",&ar[i]);
+		   }
+		for(i=10;i>0;i--)
+		    {
+		      for(j=10;j>0;j--)
+			  {
+			  temp=ar[i];
+			  ar[i]=ar[j];
+			  ar[j]=temp;
+			  }
+
+			  }
+			  for(i=0;i<10;i++)
+			  {
+			  printf("%d\n",ar[i]);
+			  }
+
+
+	getch();
+	}
+

@@ -1,0 +1,71 @@
+#include<conio.h>
+#include<stdio.h>
+#define maxx 5
+	void main()
+	{
+	  int i,beg=0,last=(maxx-1),ar[maxx],item,flag=0,a=0;
+	  int mid=0;
+	  clrscr();
+	  mid=(beg+last)/2;
+	  printf("\n enter the elements");
+	 for(i=0;i<maxx;i++)
+	  {
+	    scanf("%d",&ar[i]);
+	  }
+	   printf("\nmid is %d",mid);
+	  printf("\n enter the element to be search..... ");
+	  scanf("%d",&item);
+	  for(i=0;i<maxx;i++)
+		{
+
+		if(item>ar[mid])
+			{
+			   for(i=mid;i<maxx;i++)
+			       {
+				  if(item==ar[i]);
+				    {    flag=1;
+
+				     //  printf("\n element is found%d",ar[i]);
+				    }
+				  /*  else
+				     {
+				       printf("\n element is not found");
+				     }*/
+			       }
+			       if(flag==1)
+			       {
+				printf("element is found and it is greater then mid");
+			       }
+			  }
+		     else if( item<ar[mid])
+			{
+			  for(i=0;i<mid;i++)
+			    {
+			       if( item==ar[i])
+				  {           a=1;
+				   // printf("\n element is found%d",ar[i]);
+				  }
+				 /* else
+				  {
+				    printf("\n element is not found");
+				  } */
+			     }
+			     if(a==1)
+			     {
+				printf("element is found and it is smaller then mid");
+			     }
+			 }
+
+		   /*   else if(item==ar[mid])
+		      {
+			printf("\n element is at mid%d",ar[mid]);
+		      }
+		      else
+		       {
+			 printf("\n element is not found" );
+		       }
+		       }       */*
+
+
+	  getch();
+}
